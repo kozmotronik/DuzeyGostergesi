@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DuzeyGostergesiActivity">
+
+    <View
+        android:id="@+id/view_gosterge"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/duzey_layer_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_yuzde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%0"
+        app:layout_constraintBottom_toBottomOf="@+id/view_gosterge"
+        app:layout_constraintEnd_toEndOf="@+id/view_gosterge"
+        app:layout_constraintStart_toStartOf="@+id/view_gosterge"
+        app:layout_constraintTop_toTopOf="@+id/view_gosterge" />
+
+    <TextView
+        android:id="@+id/textView_bilgi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Pili doldur / boşalt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_gosterge" />
+
+    <SeekBar
+        android:id="@+id/seekBar_ayar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_bilgi" />
+
+    <Button
+        android:id="@+id/button_doldur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Doldur"
+        app:layout_constraintEnd_toEndOf="@+id/editText_miktar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_bosalt"
+        app:layout_constraintTop_toBottomOf="@+id/editText_miktar" />
+
+    <Button
+        android:id="@+id/button_bosalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Boşalt"
+        app:layout_constraintStart_toStartOf="@+id/editText_miktar"
+        app:layout_constraintTop_toBottomOf="@+id/editText_miktar" />
+
+    <TextView
+        android:id="@+id/textView_kademeBilgi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Artırma / azaltma değeri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_ayar" />
+
+    <EditText
+        android:id="@+id/editText_miktar"
+        style="@android:style/Widget.Material.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="5"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_kademeBilgi" />
+</androidx.constraintlayout.widget.ConstraintLayout>
